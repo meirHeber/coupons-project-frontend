@@ -1,0 +1,46 @@
+.table {
+    display: inline-block;
+    font-size: x-large;
+    margin: 30px;
+    margin-right: min(auto, 2vh);
+    margin-left: min(auto, 2vh);
+  
+    margin-top: none;
+   
+    /* font-weight: bold; */
+
+}
+.GenericCompanyCategoryCard, .table{
+    background-color: rgba(191, 241, 230, 0.666);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 2px -2px 15px 1px rgba(0, 0, 0, 0.753);
+
+
+}
+
+.table td {
+    border-top: 1px solid rgb(3, 94, 61);
+    /* border-bottom: 0.5px solid rgb(3, 94, 61); */
+    width: auto;
+    padding: clamp(2vh, 3vh, 3vh);
+    font-size: 95%;
+}
+.table thead>td{
+       /* background-color: rgba(191, 241, 230, 0.783); */
+       border: none;
+       padding: 10px;
+       font-size: 100%;
+       font-weight: 1000;
+       /* border: 1px solid #ddd; */
+}
+
+
+/* .amount-users {
+    font-size: 23px;
+    font-weight: bolder;
+    margin: 15px;
+    padding-top: 10px;
+    margin-bottom: none;
+    text-shadow: 0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff, 0 0 15px #fff;
+} */

@@ -1,0 +1,56 @@
+.GenericCompanyCategoryCard {
+    display: inline-block;
+
+    height: auto;
+    width: auto;
+    margin: 17px;
+    transition: all 0.7s;
+    font-size: 23px;
+    padding-top: 18px;
+    padding-bottom: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+
+}
+
+.GenericCompanyCategoryCard hr {
+    border: 2px solid rgba(5, 53, 42, 0.518);
+    /* border-color: rgb(34, 159, 130); */
+    border-radius: 100px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.company-or-category-card-icon {
+    margin-top: 5px;
+    font-size: 30px;
+
+}
+
+.company-or-category-icon {
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-top: 5px;
+    margin-bottom: none;
+    font-size: 30px;
+    filter: drop-shadow(4px 4px 4px rgb(0 0 0 / 0.4));
+
+
+}
+
+.delete-editcompany-or-category-icon {
+    font-size: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.GenericCompanyCategoryCard:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,0 +1,30 @@
+#selectedButtonInHeader{
+    font-weight: bolder;
+    font-size: larger;
+
+}
+
+.button-in-header {
+    display: inline-block;
+    /* width: 7.5%; */
+    background-color: rgba(0, 255, 255, 0);
+    border-top: 0ch;
+    border-bottom: 0ch;
+    border-left: 0ch;
+    border-right: 2px solid;
+    width: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+
+
+    border-radius: 0%;
+    transition: all 0.5s;
+    /* font-weight: 30%; */
+    color:  rgb(5, 53, 42);
+    border-color:  rgb(5, 53, 42);
+
+}
+
+.button-in-header:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

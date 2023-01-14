@@ -1,0 +1,10 @@
+.test-modal button{
+     /* padding: 30%; */
+     display: block;
+     cursor: pointer;
+right: 0;
+  top: 0;
+  height:100px;
+ 
+    width: 100%;
+}

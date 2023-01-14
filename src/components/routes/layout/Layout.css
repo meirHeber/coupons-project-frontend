@@ -1,0 +1,50 @@
+.layout {
+  color: rgb(5, 53, 42);
+  height: 100vh;
+  /* width: 100%; */
+  border: 2px solid black;
+  background-image: url("./../../../assets/layuotBackround.png");
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  text-align: center;
+  box-sizing: border-box;
+  display: grid;
+
+  font-family: Comic Sans MS;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 10% 85% 5%;
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: auto 1fr auto; */
+
+
+}
+
+.page {
+  height: 100%;
+  width: 100%;
+}
+
+/* .layout>* {
+  /* border: 1px solid rgb(5, 5, 73); */
+
+/*} */
+
+.layout>header,
+footer {
+  grid-column: span 12;
+    object-fit: contain;
+    background-color: rgba(191, 241, 230, 0.499);
+    backdrop-filter: blur(15px);
+    box-shadow: 10px -7px 30px 4px rgba(0, 0, 0, 0.753);
+    z-index: 1;
+
+}
+
+/* .layout>aside {
+  grid-column: span 2;
+} */
+
+.layout>main {
+  grid-column: span 12;
+  overflow-y: scroll;
+}

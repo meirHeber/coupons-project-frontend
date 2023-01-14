@@ -1,0 +1,29 @@
+.text-input {
+    /* width: 30%; */
+    /* height: 40px; */
+    box-shadow: 0px -0px 4px 1px rgba(0, 0, 0, 0.584);
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    margin-top: 10px;
+    border-radius: 5px;
+    /* border: 2px solid rgb(5, 5, 73); */
+    background-color: rgba(191, 241, 230, 0.911);
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size:medium;
+    font-family: Comic Sans MS;
+  }
+  .text-input::placeholder{
+    padding-left: 8px;
+    padding-right: 8px;
+
+    font-size: large;
+    /* margin-left: 20px; */
+  }
+  .text-input:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }

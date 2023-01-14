@@ -1,0 +1,8 @@
+.not-found-div{
+    height: 100%;
+    background-color: white;
+  }
+  .not-found-div>img{
+   
+   margin-top: 10%;
+  }

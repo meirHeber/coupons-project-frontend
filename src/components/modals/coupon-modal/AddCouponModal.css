@@ -1,0 +1,10 @@
+.input-and-label-div input, .input-and-label-div select{
+  width: 100%;
+}
+.input-and-label-div{
+  display: inline-block;
+  width: clamp(50px, 42%, 300px);
+  margin-top: clamp(7px, 1.3vh, 1000px);
+  margin-left: 20px;
+  margin-right: 20px;
+}

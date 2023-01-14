@@ -1,0 +1,51 @@
+.show-user-details-inside{
+color: rgb(5, 53, 42)
+}
+.show-user-details-inside p {
+    font-size: 25px;
+    margin: 9px;
+  
+    
+}
+.show-user-details-inside hr {
+    border: 1px solid rgba(5, 53, 42, 0.518);
+    /* border-color: rgb(34, 159, 130); */
+    border-radius: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 17px;
+    padding-right: 20px;
+    padding-left: 20px;
+    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.2), 0 1px 15px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+.show-user-details-inside h1 {
+   font-weight: bolder;
+}
+
+.icon-in-user-modal{
+    font-size: 30px;
+    margin-top: 15px;
+}
+.show-user-details-inside span {
+    font-weight: bold;
+}
+.edit-user-icon-in-modal{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: none;
+    font-size: 38px;
+    transition: all 0.4s;
+    border-radius: 50px;
+    /* box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+    filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.3));
+}
+.edit-user-icon-in-modal:hover{
+    color: rgb(36, 94, 69);
+    filter: drop-shadow(6px 6px 2px rgb(0 0 0 / 0.3));
+
+}

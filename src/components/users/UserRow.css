@@ -1,0 +1,20 @@
+.icon{
+    /* font-size: 3vh; */
+    font-weight:900;
+    transition: all 0.4s;
+   
+    border-radius: 50px;
+    filter: drop-shadow(4px 4px 4px rgb(0 0 0 / 0.4));
+
+    /* box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+
+}
+.user-icon{
+    font-size: 25px;
+}
+.icon:hover{
+  
+    /* margin: 5px; */
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}

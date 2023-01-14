@@ -1,0 +1,67 @@
+.close-modal-icon {
+  font-size: 30px;
+  color: rgb(5, 53, 42);
+  border-radius: 50px;
+  box-shadow: 0px -1px 15px -3px rgba(0, 0, 0, 0.753);
+  border-color: blue;
+}
+
+.modal-outside h1 {
+  font-size: clamp(30px, 3.2vh, 100px);
+}
+.aaaaa{
+  display: block;
+}
+.add-coupon-modal-inside{
+  max-width: 1100px;
+  min-width: 1050px;
+}
+
+
+.modal-outside>div {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.modal-outside {
+  transform: translate(-50%, -48%);
+  margin-left: 50%;
+  margin-top: 25%;
+  height: auto;
+  width: auto;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.5s;
+  box-shadow: 0px -1px 15px -3px rgba(0, 0, 0, 0.753);
+  background-color: rgba(191, 241, 230, 0.624);
+  backdrop-filter: blur(5px);
+}
+
+.modal-outside:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.close-modal-icon:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text-over-input {
+  font-size: clamp(15px, 270%, 100px);
+  margin-bottom: 5px;
+}
+
+.modal-outside button {
+  margin-top: 20px;
+}
+
+.modal-outside button,
+.modal-outside input,
+.modal-outside select,
+.modal-outside option {
+  width: 90%;
+  height: 45px;
+}

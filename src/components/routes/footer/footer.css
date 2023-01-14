@@ -1,0 +1,12 @@
+.footer {
+    height: 100%;
+    font-size:clamp(13.5px, 1.9vh, 100px);
+    text-align: calc(10); 
+}
+.text-in-footer{
+    margin-top: 0.6%;
+    height: auto;
+    padding: none;
+    display: inline-block;
+    font-weight: bold;
+}

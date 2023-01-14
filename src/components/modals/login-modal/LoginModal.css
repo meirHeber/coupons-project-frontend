@@ -1,0 +1,16 @@
+input {
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(192, 219, 235, 0.946)
+}
+
+
+.login-modal-inside {
+  height: auto;
+  width: 350px;
+  text-align: center;
+}
+
+
+

@@ -1,0 +1,118 @@
+.header {
+    height: 100%;
+
+}
+.div-user-icon{
+    display: inline-block;
+    height: 70%;
+font-size: 1.5vh;
+font-weight: bold;
+    padding: 2vh;
+    /* font-size: 80px; */
+    text-align: center;
+
+}
+.user-icon{
+    transition: all 0.6s;
+    border-radius: 50px;
+    /* box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+    filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.3));
+
+}
+.user-icon:hover{
+    color: rgb(15, 84, 60);
+    filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.3));
+
+    /* border-radius: 50px; */
+    /* border: 2px solid black; */
+    /* box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+
+    /* filter: drop-shadow(6px 6px 6px rgb(0 0 0 / 0.4)); */
+
+}
+
+
+.button-in-header,
+.hello-first-name,
+.dropbtn,
+.add-button {
+    font-size: clamp(15px, 1.7vh, 200px);
+
+}
+
+.test-user-icon{
+font-size: 40px;
+margin-left: 5px;
+margin-top: 100px;
+}
+
+.button-in-header,
+.hello-first-name {
+    float: left;
+}
+
+.button-in-header,
+.dropdown,
+.hello-first-name,
+.add-button {
+    margin-top: 1.4vh;
+
+}
+
+.coupons-logo {
+    object-fit: contain;
+    min-width: 105px;
+    height: 85%;
+    width: 8.3%;
+    float: right;
+    margin-top: 0.5%;
+    margin-left: none;
+    margin-right: 2vh;
+}
+
+.dropdown, .add-button{
+    margin-right: 0.8%;
+
+}
+.dropdown {
+    float: right;
+    width: 7.5%;
+}
+
+.dropdown,
+.button-in-header,
+.add-button {
+    min-width: 50px;
+    /* margin-top: 1%; */
+    height: 70%;
+
+
+}
+
+.hello-first-name {
+    display: inline-block;
+    height: 70%;
+
+    margin-left: 1%;
+    background-color: rgba(0, 255, 255, 0);
+    border: 0ch;
+    border-radius: 0%;
+    font-weight: bold;
+}
+
+.hello-first-name {
+    width: 15%;
+    text-align: left;
+    margin-left: 1.5vh;
+}
+
+
+.buttons-in-header-div {
+    height: 100%;
+    margin-left: 15px;
+    display: inline-block;
+    float: left;
+
+}

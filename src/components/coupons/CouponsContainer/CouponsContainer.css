@@ -1,0 +1,24 @@
+.div-down-cards>button {
+  /* width: 5%; */
+  height: auto;
+  width: auto;
+  font-size: 15px;
+  display: inline-block;
+  margin: 7px;
+}
+.div-down-cards{
+  margin-bottom: 12px;
+}
+
+.page-transition-button:hover {
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+}
+
+.page-number {
+  display: inline-block;
+}
+.serach-and-add-coupon-div{
+  display: inline;
+}
+
+/* https://codepen.io/ahmadbassamemran/pen/rNjMXqg */

@@ -1,0 +1,23 @@
+export enum ActionType {
+    GetCouponsByPages,
+    Login,
+    DeleteCoupon,
+    LogOut,
+    ChangedCouponParameterFoerSearch,
+    ChangedCouponParameterFoerSort,
+    OpenLoginModal,
+    OpenAddCouponModal,
+    OpenAddCompnyModal,
+    OpenAddCategoryModal,
+    OpenShowUserModal,
+    SelectedCouponForBuy,
+    SelectedCouponForDelete,
+    SelectedCouponForUpdate,
+    SelectedCompanyForUpdate,
+    SelectedCompanyForDelete,
+    SelectedCategoryForUpdate,
+    SelectedCategoryForDelete,
+    SelectedUserForUpdate,
+    SelectedUserForDelete,
+    SelectedUserForShow
+}

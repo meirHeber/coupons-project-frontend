@@ -1,0 +1,25 @@
+.generic-are-you-suer-inside h1{
+    font-size: 23px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 450px;
+}
+
+.buttons-div {
+    margin-top: 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+
+.buttons-div button {
+    display: inline-block;
+    width: 45%;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+#yes-button{
+    background-color: brown;
+}

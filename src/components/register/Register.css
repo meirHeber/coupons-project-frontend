@@ -1,0 +1,38 @@
+.Register input, .Register select, .Register button {
+    width: 35%;
+    height: 45px;
+    /* margin: 10px; */
+    border-radius: 5px;
+    border: none;
+
+  }
+  .Register{
+    /* margin-top: 15%; */
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+
+
+    height: 30%;
+    text-align: center;
+    text-shadow: 0 0 15px #fff, 0 0 15px #fff;
+
+  }
+  .text-over-register-input{
+    font-size: 50px;
+    margin-bottom: 5px;  
+  }
+  /* .Login>button{
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+  } */
+  .Register label{
+   font-size: 20px;
+   font-weight: 600;
+  }
+  .Register button{
+    margin: 15px;
+    margin-bottom: 7vh;
+        text-align: center;
+
+  }
