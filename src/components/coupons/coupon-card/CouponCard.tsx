@@ -15,11 +15,9 @@ export interface IProps {
 
 function CouponCard(props: IProps) {
 
-
     const dispatch = useDispatch();
     const userType: string = useSelector((state: AppState) => state.userType);
     const isLogedIn: string = useSelector((state: AppState) => state.firstName);
-
 
     function buyIt() {
         if (isLogedIn == "") {
@@ -29,12 +27,10 @@ function CouponCard(props: IProps) {
             dispatch({ type: ActionType.SelectedCouponForBuy, payload: props.coupon })
         }
     }
-   
-
 
     return (
         <div className="flip-card-container" >
-            
+
             <div className="flip-card">
                 <div className="card-front">
                     <figure>

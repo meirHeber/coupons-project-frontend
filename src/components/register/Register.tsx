@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { AlertTypes } from '../../enums/AlertTypes';
 import { UsersType } from '../../enums/UsersType';
 import { ICompany } from '../../models/ICompany';
 import { IUser } from '../../models/IUser';
@@ -9,6 +10,7 @@ import { ActionType } from '../../redux/action-type';
 import { AppState } from '../../redux/app-state';
 import CatchFunction from '../../utils/catchFuncion';
 import GetCompanies from '../../utils/get-functions/GetCompanies';
+import GetMassageFromError from '../../utils/GetMassageFromError';
 import Button from '../buttons/generic-button/Button';
 import TextInput from '../generic-utils-components/input-card/Text-input';
 import InputLabel from '../generic-utils-components/input-label/InputLabel';
@@ -96,7 +98,8 @@ function Register() {
       navigate('/home');
     }
     catch (error: any) {
-     CatchFunction(error)
+    //  CatchFunction(error)
+    dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.error, text: GetMassageFromError(error)}})      
     };
   }
 

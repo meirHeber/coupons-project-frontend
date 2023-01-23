@@ -9,6 +9,8 @@ import GenericTable from '../tables/GenericTable';
 import catchFunction from '../../utils/catchFuncion';
 import { UsersType } from '../../enums/UsersType';
 import { ErrorTypes } from '../../enums/ErrorTypes';
+import GetMassageFromError from '../../utils/GetMassageFromError';
+import { AlertTypes } from '../../enums/AlertTypes';
 
 function Users() {
   const dispatch = useDispatch();
@@ -34,7 +36,7 @@ function Users() {
       setUsers(usersData)
     }
     catch (error: any) {
-      catchFunction(error);
+      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.error, text: GetMassageFromError(error)}})      
     };
 
     function getUserValidations() {

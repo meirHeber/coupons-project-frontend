@@ -19,5 +19,7 @@ export enum ActionType {
     SelectedCategoryForDelete,
     SelectedUserForUpdate,
     SelectedUserForDelete,
-    SelectedUserForShow
+    SelectedUserForShow,
+    OpenAlert,
+    CloseAlert
 }

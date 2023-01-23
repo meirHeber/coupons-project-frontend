@@ -10,11 +10,16 @@ import InputLabel from '../../generic-utils-components/input-label/InputLabel';
 import TextInput from '../../generic-utils-components/input-card/Text-input';
 import GenericModal from '../generic-modal/GenericModal';
 import catchFunction from '../../../utils/catchFuncion';
+import jwt_decode from "jwt-decode";
+
+import { AlertTypes } from '../../../enums/AlertTypes';
+import GetMassageFromError from '../../../utils/GetMassageFromError';
 
 function LoginModal() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -27,16 +32,18 @@ function LoginModal() {
       axios.defaults.headers.common['Authorization'] = token;
       localStorage.setItem('token', token);
       dispatch({ type: ActionType.Login, payload: token })
+      let decode:any = jwt_decode(token);
+      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.success, text: "Welcome, " +  decode.sub }})      
       navigate('/home')     
     }
     catch (error: any) {
-      catchFunction(error);
+      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.error, text: GetMassageFromError(error)}})      
     };
   }
 
   function loginValidations(){
     if(username.length < 6 || password.length <6){
-      throw new Error("username or password too short", );
+      throw new Error("username or password too short");
     }
   }
   ///===========================================================

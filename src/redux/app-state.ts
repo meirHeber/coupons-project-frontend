@@ -1,4 +1,6 @@
+import { AlertTypes } from "../enums/AlertTypes";
 import { UsersType } from "../enums/UsersType";
+import IAlert from "../models/IAlert";
 import { ICategory } from "../models/ICategory";
 import { ICompany } from "../models/ICompany";
 import { ICoupon } from "../models/ICoupon";
@@ -33,4 +35,9 @@ export class AppState{
     public userIdForDelete: IUser = null;
     public openShowUserModal: boolean = false;
     public userForShow: IUser = null;
+    public showAlert:boolean = false;
+    public alertValue: IAlert = {
+        type: AlertTypes.success,
+        text: "test"
+    };
 }

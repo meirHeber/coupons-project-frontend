@@ -1,10 +1,5 @@
 
-
 export default function CatchFunction(error: any) {
-
-
-
-
 
     console.error(error);
 
@@ -23,6 +18,4 @@ export default function CatchFunction(error: any) {
     else if (error instanceof Error) {
         alert(error.message)
     }
-
-
 }

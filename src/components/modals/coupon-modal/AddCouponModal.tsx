@@ -17,6 +17,8 @@ import { ICompany } from '../../../models/ICompany';
 import { ICoupon } from '../../../models/ICoupon';
 import GetCategories from '../../../utils/get-functions/GetCategories';
 import GetCompanies from '../../../utils/get-functions/GetCompanies';
+import { AlertTypes } from '../../../enums/AlertTypes';
+import GetMassageFromError from '../../../utils/GetMassageFromError';
 
 
 
@@ -88,7 +90,8 @@ function AddCouponModal() {
       closeModal();
     }
     catch (error: any) {
-      catchFunction(error);
+      // catchFunction(error);
+      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.error, text: GetMassageFromError(error)}})      
     };
   }
 

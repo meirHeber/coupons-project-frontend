@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import IPurchase from '../../models/IPurchase';
 import { AppState } from '../../redux/app-state';
 import PurchaseRow from './PurchaseRow';
@@ -8,11 +8,16 @@ import GenericTable from '../tables/GenericTable';
 import { UsersType } from '../../enums/UsersType';
 import catchFunction from '../../utils/catchFuncion';
 import { ErrorTypes } from '../../enums/ErrorTypes';
+import GetMassageFromError from '../../utils/GetMassageFromError';
+import { AlertTypes } from '../../enums/AlertTypes';
+import { ActionType } from '../../redux/action-type';
 
 function Purchases() {
 
   const userType: string = useSelector((state: AppState) => state.userType);
   const [purchases, setPurchases] = useState<IPurchase[]>([]);
+  const dispatch = useDispatch();
+
 
   useEffect(() => {
     getAllPurchases();
@@ -34,7 +39,7 @@ function Purchases() {
       setPurchases(serverResponse.data)
     }
     catch (error: any) {
-      catchFunction(error);
+      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.error, text: GetMassageFromError(error)}})      
     };
   }
 

@@ -17,6 +17,8 @@ import { PathNames } from '../../../enums/PathNames';
 import { FaUserCircle } from 'react-icons/fa';
 import catchFunction from '../../../utils/catchFuncion';
 import { IUser } from '../../../models/IUser';
+import GenericAlert from '../../../tests/GenericAlert';
+import { AlertTypes } from '../../../enums/AlertTypes';
 
 function Header() {
 
@@ -64,7 +66,7 @@ function Header() {
   let onLogOutButtonClicked = (): void => {
     dispatch({ type: ActionType.LogOut })
     navigate('/home')
-    alert("goodbye " + firstName);
+    dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.information, text: "goodbye " + firstName}})      
   }
 
   return (
@@ -93,6 +95,8 @@ function Header() {
         {window.location.pathname == PathNames.users && <AddButton textOnButton={'Add user'} onButtonClicke={() => navigate('/register')} />}
         {window.location.pathname == PathNames.categories && <AddButton textOnButton={'Add category'} onButtonClicke={() => dispatch({ type: ActionType.OpenAddCategoryModal, payload: true })} />}
       </span>}
+      <GenericAlert/>
+
     </div>
   )
 }

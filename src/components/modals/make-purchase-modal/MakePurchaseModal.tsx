@@ -13,6 +13,8 @@ import CatchFunction from '../../../utils/catchFuncion';
 import { ICoupon } from '../../../models/ICoupon';
 import { UsersType } from '../../../enums/UsersType';
 import { ErrorTypes } from '../../../enums/ErrorTypes';
+import { AlertTypes } from '../../../enums/AlertTypes';
+import GetMassageFromError from '../../../utils/GetMassageFromError';
 
 function MakePurchaseModal() {
 
@@ -32,10 +34,11 @@ function MakePurchaseModal() {
       buyCouponValidations();
       await axios.post("http://localhost:8080/purchases", { coupon: couponForBuy.id, amount });
       closeModal();
-      alert("Good luck!!! You bought " + amount + " coupons")
+      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.success, text: "Good luck!!! You bought " + amount + " coupons"}})      
     }
     catch (error: any) {
-      CatchFunction(error);
+      // CatchFunction(error);
+      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.error, text: GetMassageFromError(error)}})      
     };
   }
 

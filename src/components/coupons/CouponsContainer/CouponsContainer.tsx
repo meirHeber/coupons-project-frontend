@@ -16,9 +16,6 @@ function CouponsContainer() {
 
     let [searchValueObject, setSearchValueObject]: any = useState(null);
 
-
-    const dispatch = useDispatch();
-
     ///useSelectors====================================================================================================
     const [coupons, setCoupons] = useState<ICoupon[]>([]);
     const userType = useSelector((state: AppState) => state.userType);

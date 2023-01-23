@@ -3,6 +3,7 @@ import { Action } from "./acyion";
 import { AppState } from "./app-state";
 import jwt_decode from "jwt-decode";
 import { UsersType } from "../enums/UsersType";
+import { AlertTypes } from "../enums/AlertTypes";
 
 
 export function reduce(oldaAppState: AppState = new AppState(), action: Action): any {
@@ -13,11 +14,11 @@ export function reduce(oldaAppState: AppState = new AppState(), action: Action):
             let userLoginDate: any = jwt_decode(action.payload)
             newAppState.userType = userLoginDate.iss;
             newAppState.firstName = userLoginDate.sub;
-            newAppState.userId = +userLoginDate.jti;            
+            newAppState.userId = +userLoginDate.jti;
             newAppState.openLoginModal = false;
             if (userLoginDate.iss === UsersType.company) {
                 newAppState.companyId = +userLoginDate.aud;
-            }                                  
+            }
             break;
         case ActionType.LogOut:
             newAppState.userType = null;
@@ -137,7 +138,7 @@ export function reduce(oldaAppState: AppState = new AppState(), action: Action):
             if (!action.payload) {
                 newAppState.openShowUserModal = false;
             }
-            else{
+            else {
                 newAppState.openShowUserModal = true;
             }
             break;
@@ -146,6 +147,17 @@ export function reduce(oldaAppState: AppState = new AppState(), action: Action):
             if (!action.payload) {
                 newAppState.userForShow = null;
             }
+            break;
+        case ActionType.OpenAlert:
+            newAppState.alertValue = action.payload;
+            newAppState.showAlert = true;
+            break;
+        case ActionType.CloseAlert:
+            newAppState.showAlert = false;
+            newAppState.alertValue = {
+                type: AlertTypes.success,
+                text: "test"
+            };
             break;
 
 

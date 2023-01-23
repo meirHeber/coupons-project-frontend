@@ -13,12 +13,7 @@ export interface IProps {
 function CompanyCard(props: IProps) {
     
     const dispatch = useDispatch();
-
-
-    function deleteIt(id: number) {
-        console.log("delete it from function. id: " + id);
-    }
-
+    
     return (
         <GenericCompanyCategoryCard
             key={props.company.id}
@@ -26,7 +21,6 @@ function CompanyCard(props: IProps) {
                 <p><b>name: </b>{props.company.name}</p>
                 <p><b>address: </b>{props.company.address}</p>
                 <p><b>phone number: </b>{props.company.phoneNumber}</p>
-
             </div>}
             icon={<FaStore/>}
             onDeleteClick={() => dispatch({ type: ActionType.SelectedCompanyForDelete, payload: props.company.id })}
