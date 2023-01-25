@@ -10,37 +10,38 @@ import CouponCard from '../coupon-card/CouponCard';
 import MakePurchaseModal from '../../modals/make-purchase-modal/MakePurchaseModal';
 import catchFunction from '../../../utils/catchFuncion';
 import { UsersType } from '../../../enums/UsersType';
-
+import { AlertTypes } from '../../../enums/AlertTypes';
+import { ActionType } from '../../../redux/action-type';
+import GetMassageFromError from '../../../utils/GetMassageFromError';
 
 function CouponsContainer() {
 
+    let dispatch = useDispatch();
+
+    const [coupons, setCoupons] = useState<ICoupon[]>([]);
     let [searchValueObject, setSearchValueObject]: any = useState(null);
 
     ///useSelectors====================================================================================================
-    const [coupons, setCoupons] = useState<ICoupon[]>([]);
     const userType = useSelector((state: AppState) => state.userType);
     const searchBy = useSelector((state: AppState) => state.searchCouponsBy);
     const sortBy = useSelector((state: AppState) => state.sortCouponsBy);
     const couponForDelete = useSelector((state: AppState) => state.couponForDelete);
-    const couponIdForBuy:ICoupon = useSelector((state: AppState) => state.couponForBuy);
+    const couponIdForBuy: ICoupon = useSelector((state: AppState) => state.couponForBuy);
     const couponForEdit = useSelector((state: AppState) => state.couponForUpdate);
 
-    window.onerror = function(e:any){
-        if(e.includes("NotFoundError:")){
+    window.onerror = function (e: any) {
+        if (e.includes("NotFoundError:")) {
             document.location.reload()
             return true;
         }
-       
     }
-
-
 
     ///pageParameters====================================================================================================
     let [pageNumber, setPageNumber] = useState<number>(0);
     const quantityPerPage: number = 14;
     let onNextPageClicked = () => {
-            pageNumber++;
-            setPageNumber(pageNumber);
+        pageNumber++;
+        setPageNumber(pageNumber);
     }
     let onPreviousPageClicked = () => {
         if (pageNumber == 0) {
@@ -75,14 +76,12 @@ function CouponsContainer() {
     useEffect(() => {
         setPageNumber(0);
     }, [sortBy])
-    
 
     useEffect(() => {
-        getCouponsByPages();        
+        getCouponsByPages();
     }, [pageNumber, searchValue, sortBy, userType, couponIdForBuy, couponForDelete, couponForEdit]);
 
     ///getCoupons===========================================================================================================
-    
 
     const getCouponsByPages = async () => {
         try {
@@ -93,11 +92,10 @@ function CouponsContainer() {
             else {
                 response = await axios.get(`http://localhost:8080/coupons/paginationAndFilterBySort`, { params: { searchBy, searchValue, pageNumber, quantityPerPage, sortBy } });
             }
-            setCoupons(response.data) ;
-            // dispatch({ type: ActionType.GetCouponsByPages, payload: serverRespons })
+            setCoupons(response.data);
         }
         catch (error: any) {
-            catchFunction(error);
+            dispatch({ type: ActionType.OpenAlert, payload: { type: AlertTypes.error, text: GetMassageFromError(error) } })
         }
     }
 

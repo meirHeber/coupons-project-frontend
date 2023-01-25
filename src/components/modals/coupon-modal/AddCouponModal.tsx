@@ -28,11 +28,9 @@ function AddCouponModal() {
   let [categories, setCategories] = useState<ICategory[]>([]);
   let [companies, setCompanies] = useState<ICompany[]>([]);
 
-
-
   async function get() {
-      setCategories(await GetCategories())
-      setCompanies(await GetCompanies())
+    setCategories(await GetCategories())
+    setCompanies(await GetCompanies())
   }
 
   useEffect(() => {
@@ -57,6 +55,7 @@ function AddCouponModal() {
     let selectBox: any = document.getElementById("companySelectBox");
     setCompany(+selectBox.options[selectBox.selectedIndex].value);
   }
+  
   const onCategoryIdChanged = () => {
     let selectBox: any = document.getElementById("categorySelectBox");
     setCategory(+selectBox.options[selectBox.selectedIndex].value);
@@ -91,7 +90,7 @@ function AddCouponModal() {
     }
     catch (error: any) {
       // catchFunction(error);
-      dispatch({type: ActionType.OpenAlert, payload: {type: AlertTypes.error, text: GetMassageFromError(error)}})      
+      dispatch({ type: ActionType.OpenAlert, payload: { type: AlertTypes.error, text: GetMassageFromError(error) } })
     };
   }
 
@@ -146,7 +145,8 @@ function AddCouponModal() {
             <select className='text-input' id="categorySelectBox" onChange={onCategoryIdChanged}>
               <option value="" disabled selected>Choose category</option>
               {categories.map(category => (<option key={category.id} value={category.id}>{category.name}</option>))}
-            </select>        </div>
+            </select>
+          </div>
           <div className='input-and-label-div'>
             <InputLabel labelText={'enter coupon title:'} className={''} />
             <TextInput inputType='text' onInputChanged={(event: ChangeEvent<HTMLInputElement>) => setTitle(event.target.value)} placeholder={'title . . .'} />

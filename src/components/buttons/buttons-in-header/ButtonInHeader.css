@@ -1,7 +1,6 @@
-#selectedButtonInHeader{
+#selectedButtonInHeader {
     font-weight: bolder;
     font-size: larger;
-
 }
 
 .button-in-header {
@@ -15,14 +14,11 @@
     width: auto;
     padding-left: 14px;
     padding-right: 14px;
-
-
     border-radius: 0%;
     transition: all 0.5s;
     /* font-weight: 30%; */
-    color:  rgb(5, 53, 42);
-    border-color:  rgb(5, 53, 42);
-
+    color: rgb(5, 53, 42);
+    border-color: rgb(5, 53, 42);
 }
 
 .button-in-header:hover {

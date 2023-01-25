@@ -4,7 +4,7 @@ import './AddButton.css'
 
 function AddButton(props: IAddButton) {
   return (
-    <button className='add-button' onClick={()=>props.onButtonClicke()}>{props.textOnButton}</button>
+    <button className='add-button' onClick={() => props.onButtonClicke()}>{props.textOnButton}</button>
   )
 }
 

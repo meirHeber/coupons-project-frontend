@@ -1,13 +1,13 @@
 .add-button:hover {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .add-button {
     font-weight: bold;
     float: right;
     width: auto;
     padding-left: 20px;
     padding-right: 20px;
-
     text-align: center;
     border: 2px solid;
     background-color: none;
@@ -16,5 +16,4 @@
     border-color: rgb(5, 53, 42);
     color: rgb(5, 53, 42);
     transition: all 0.5s;
-
 }
